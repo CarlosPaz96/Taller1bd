@@ -1,5 +1,3 @@
-
---CREATE TABLE 
 --1)
 CREATE TABLE Alumno (
 nie INT NOT NULL PRIMARY KEY,
@@ -61,10 +59,10 @@ FOREIGN KEY (nie_alumno) REFERENCES Alumno (nie));
 --10)
 CREATE TABLE BitacoraXdocente(
 id INT NOT NULL PRIMARY KEY,
-coorelativo VARCHAR(10) NOT NULL,
+coorelativo VARCHAR(50) NOT NULL,
 dui_docente VARCHAR(10) NOT NULL,
 fecha_hora DATE,
-tipo VARCHAR(10),
+tipo VARCHAR(50),
 comentario VARCHAR(150),
 FOREIGN KEY (coorelativo) REFERENCES Bitacora (correlativo),
 FOREIGN KEY (dui_docente) REFERENCES Docente (dui));
@@ -828,7 +826,6 @@ INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16930211,16,1);
 INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16810926,16,1);
 INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16590107,16,1);
 
---*********************************************************************************************
 --tabla: Otorga
 INSERT INTO Otorga (id,id_Subvencion,nie_alumno,anno) VALUES(1,2,16981120,'1/1/2021');
 INSERT INTO Otorga (id,id_Subvencion,nie_alumno,anno) VALUES(2,2,16420327,'1/1/2021');
@@ -991,8 +988,7 @@ INSERT INTO Otorga (id,id_Subvencion,nie_alumno,anno) VALUES(158,1,16930211,'1/1
 INSERT INTO Otorga (id,id_Subvencion,nie_alumno,anno) VALUES(159,1,16810926,'1/1/2021');
 INSERT INTO Otorga (id,id_Subvencion,nie_alumno,anno) VALUES(160,3,16590107,'1/1/2021');
 
---***********************************************************************************************
-
+--***************************************************************************************************************
 
 INSERT INTO Accede (nie_alumno,id_edificio,fecha,hora_entrada,hora_salida) VALUES(16981120,3,'1/1/2021 1:1:34','1:1:34','1:11:34');
 INSERT INTO Accede (nie_alumno,id_edificio,fecha,hora_entrada,hora_salida) VALUES(16420327,1,'1/1/2021 8:10:13','8:10:13','8:20:13');
@@ -1106,118 +1102,120 @@ INSERT INTO Accede (nie_alumno,id_edificio,fecha,hora_entrada,hora_salida) VALUE
 INSERT INTO Accede (nie_alumno,id_edificio,fecha,hora_entrada,hora_salida) VALUES(16590107,2,'1/1/2021 2:10:40','2:10:40','2:20:40');
 
 --***************************************************************************************************************************************
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(1,16981120,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(2,16420327,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(3,16500116,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(4,16801118,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(5,16490216,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(6,16360718,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(7,16130113,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(8,16340112,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(9,16971101,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(10,16360622,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(11,16010603,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(12,16840725,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(13,16340111,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(14,16250714,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(15,16990801,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16,16820907,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(17,16650523,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(18,16420515,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(19,16440801,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(20,16081015,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(21,16381121,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(22,16220615,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(23,16570110,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(24,16980202,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(25,16800622,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(26,16620716,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(27,16920319,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(28,16260113,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(29,16371118,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(30,16311217,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(31,16540104,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(32,16560817,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(33,16611027,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(34,16820129,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(35,16380305,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(36,16171119,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(37,16340712,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(38,16310212,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(39,16471222,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(40,16421010,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(41,16351029,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(42,16891001,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(43,16150610,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(44,16840721,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(45,16151119,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(46,16680622,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(47,16120615,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(48,16020927,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(49,16030517,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(50,16380503,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(51,16450211,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(52,16010208,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(53,16041204,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(54,16131006,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(55,16870129,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(56,16640229,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(57,16040602,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(58,16230704,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(59,16090806,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(60,16031107,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(62,16800803,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(64,16630515,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(66,16030417,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(68,16240409,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(70,16100321,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(72,16300908,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(74,16290830,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(76,16120427,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(78,16361222,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(80,16730811,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(82,16590710,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(84,16470823,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(86,16770610,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(88,16270802,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(90,16110623,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(92,16741101,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(94,16560207,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(96,16871210,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(98,16591210,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(100,16981228,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(102,16311214,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(104,16080302,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(106,16611004,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(108,16210212,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(110,16640220,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(112,16700329,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(114,16790803,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(116,16141023,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(118,16260407,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(120,16981219,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(122,16080918,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(124,16101226,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(126,16821009,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(128,16120611,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(130,16810826,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(132,16310709,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(134,16680122,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(136,16100713,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(138,16140417,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(140,16371227,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(142,16310310,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(144,16940106,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(146,16100830,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(148,16010817,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(150,16681025,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(152,16300307,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(154,16910202,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(156,16640530,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(158,16930211,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
-INSERT INTO Talonario (id,nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(160,16590107,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
 
---******************************************************************************************************************************************************************************************
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16981120,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16420327,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16500116,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16801118,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16490216,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16360718,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16130113,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16340112,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16971101,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16360622,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16010603,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16840725,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16340111,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16250714,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16990801,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16820907,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16650523,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16420515,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16440801,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16081015,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16381121,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16220615,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16570110,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16980202,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16800622,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16620716,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16920319,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16260113,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16371118,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16311217,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16540104,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16560817,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16611027,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16820129,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16380305,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16171119,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16340712,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16310212,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16471222,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16421010,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16351029,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16891001,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16150610,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16840721,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16151119,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16680622,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16120615,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16020927,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16030517,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16380503,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16450211,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16010208,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16041204,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16131006,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16870129,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16640229,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16040602,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16230704,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16090806,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16031107,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16800803,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16630515,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16030417,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16240409,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16100321,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16300908,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16290830,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16120427,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16361222,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16730811,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16590710,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16470823,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16770610,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16270802,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16110623,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16741101,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16560207,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16871210,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16591210,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16981228,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16311214,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16080302,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16611004,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16210212,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16640220,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16700329,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16790803,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16141023,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16260407,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16981219,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16080918,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16101226,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16821009,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16120611,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16810826,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16310709,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16680122,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16100713,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16140417,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16371227,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16310310,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16940106,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16100830,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16010817,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16681025,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16300307,2,90.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16910202,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16640530,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16930211,1,60.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+INSERT INTO Talonario (nie_alumno,id_pago,monto,estado,fecha_pago,fecha_admision,fecha_vencimiento) VALUES(16590107,3,110.00,'pagado','1/1/2021','1/1/2021','1/2/2021');
+
+
+--***************************************************************************************************************************************
 
 INSERT INTO Bitacora (correlativo,nie_alumno,dui_responsable) VALUES('COD-16981120',16981120,'16981129-3');
 INSERT INTO Bitacora (correlativo,nie_alumno,dui_responsable) VALUES('COD-16420327',16420327,'16350423-4');
@@ -1330,10 +1328,167 @@ INSERT INTO Bitacora (correlativo,nie_alumno,dui_responsable) VALUES('COD-166405
 INSERT INTO Bitacora (correlativo,nie_alumno,dui_responsable) VALUES('COD-16930211',16930211,'16760603-2');
 INSERT INTO Bitacora (correlativo,nie_alumno,dui_responsable) VALUES('COD-16590107',16590107,'16180504-3');
 
---*****************************************************************************************************************************
-
-
-
+--************************************************************************************************************
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(1,'COD-16981120','16970415-5','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(2,'COD-16420327','16970415-5','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(3,'COD-16500116','16970415-5','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(4,'COD-16801118','16970415-5','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(5,'COD-16490216','16970415-5','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(6,'COD-16360718','16970415-5','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(7,'COD-16130113','16970415-5','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(8,'COD-16340112','16970415-5','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(9,'COD-16971101','16970415-5','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(10,'COD-16360622','16970415-5','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(11,'COD-16010603','16351211-8','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(12,'COD-16840725','16351211-8','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(13,'COD-16340111','16351211-8','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(14,'COD-16250714','16351211-8','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(15,'COD-16990801','16351211-8','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(16,'COD-16820907','16351211-8','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(17,'COD-16650523','16351211-8','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(18,'COD-16420515','16351211-8','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(19,'COD-16440801','16351211-8','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(20,'COD-16081015','16351211-8','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(21,'COD-16381121','16851203-6','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(22,'COD-16220615','16851203-6','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(23,'COD-16570110','16851203-6','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(24,'COD-16980202','16851203-6','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(25,'COD-16800622','16851203-6','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(26,'COD-16620716','16851203-6','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(27,'COD-16920319','16851203-6','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(28,'COD-16260113','16851203-6','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(29,'COD-16371118','16851203-6','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(30,'COD-16311217','16851203-6','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(31,'COD-16540104','16380520-5','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(32,'COD-16560817','16380520-5','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(33,'COD-16611027','16380520-5','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(34,'COD-16820129','16380520-5','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(35,'COD-16380305','16380520-5','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(36,'COD-16171119','16380520-5','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(37,'COD-16340712','16380520-5','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(38,'COD-16310212','16380520-5','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(39,'COD-16471222','16380520-5','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(40,'COD-16421010','16380520-5','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(41,'COD-16351029','16770629-9','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(42,'COD-16891001','16770629-9','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(43,'COD-16150610','16770629-9','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(44,'COD-16840721','16770629-9','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(45,'COD-16151119','16770629-9','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(46,'COD-16680622','16770629-9','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(47,'COD-16120615','16770629-9','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(48,'COD-16020927','16770629-9','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(49,'COD-16030517','16770629-9','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(50,'COD-16380503','16770629-9','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(51,'COD-16450211','16830727-5','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(52,'COD-16010208','16830727-5','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(53,'COD-16041204','16830727-5','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(54,'COD-16131006','16830727-5','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(55,'COD-16870129','16830727-5','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(56,'COD-16640229','16830727-5','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(57,'COD-16040602','16830727-5','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(58,'COD-16230704','16830727-5','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(59,'COD-16090806','16830727-5','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(60,'COD-16031107','16830727-5','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(61,'COD-16550810','16991127-9','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(62,'COD-16800803','16991127-9','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(63,'COD-16310916','16991127-9','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(64,'COD-16630515','16991127-9','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(65,'COD-16160914','16991127-9','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(66,'COD-16030417','16991127-9','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(67,'COD-16011015','16991127-9','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(68,'COD-16240409','16991127-9','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(69,'COD-16260624','16991127-9','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(70,'COD-16100321','16991127-9','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(71,'COD-16300802','16990125-2','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(72,'COD-16300908','16990125-2','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(73,'COD-16361119','16990125-2','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(74,'COD-16290830','16990125-2','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(75,'COD-16071014','16990125-2','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(76,'COD-16120427','16990125-2','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(77,'COD-16500907','16990125-2','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(78,'COD-16361222','16990125-2','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(79,'COD-16650611','16990125-2','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(80,'COD-16730811','16990125-2','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(81,'COD-16540414','16480905-3','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(82,'COD-16590710','16480905-3','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(83,'COD-16900722','16480905-3','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(84,'COD-16470823','16480905-3','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(85,'COD-16810625','16480905-3','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(86,'COD-16770610','16480905-3','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(87,'COD-16470526','16480905-3','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(88,'COD-16270802','16480905-3','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(89,'COD-16910213','16480905-3','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(90,'COD-16110623','16480905-3','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(91,'COD-16541019','16461023-8','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(92,'COD-16741101','16461023-8','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(93,'COD-16161113','16461023-8','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(94,'COD-16560207','16461023-8','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(95,'COD-16030220','16461023-8','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(96,'COD-16871210','16461023-8','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(97,'COD-16810924','16461023-8','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(98,'COD-16591210','16461023-8','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(99,'COD-16001227','16461023-8','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(100,'COD-16981228','16461023-8','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(101,'COD-16680827','16990410-4','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(102,'COD-16311214','16990410-4','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(103,'COD-16540110','16990410-4','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(104,'COD-16080302','16990410-4','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(105,'COD-16520721','16990410-4','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(106,'COD-16611004','16990410-4','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(107,'COD-16261115','16990410-4','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(108,'COD-16210212','16990410-4','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(109,'COD-16761220','16990410-4','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(110,'COD-16640220','16990410-4','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(111,'COD-16460429','16280226-9','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(112,'COD-16700329','16280226-9','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(113,'COD-16850209','16280226-9','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(114,'COD-16790803','16280226-9','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(115,'COD-16090824','16280226-9','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(116,'COD-16141023','16280226-9','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(117,'COD-16741116','16280226-9','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(118,'COD-16260407','16280226-9','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(119,'COD-16031017','16280226-9','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(120,'COD-16981219','16280226-9','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(121,'COD-16280918','16291004-4','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(122,'COD-16080918','16291004-4','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(123,'COD-16410313','16291004-4','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(124,'COD-16101226','16291004-4','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(125,'COD-16320317','16291004-4','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(126,'COD-16821009','16291004-4','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(127,'COD-16171205','16291004-4','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(128,'COD-16120611','16291004-4','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(129,'COD-16180509','16291004-4','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(130,'COD-16810826','16291004-4','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(131,'COD-16070827','16761006-4','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(132,'COD-16310709','16761006-4','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(133,'COD-16680812','16761006-4','1/12/2021','Notas','6');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(134,'COD-16680122','16761006-4','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(135,'COD-16270812','16761006-4','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(136,'COD-16100713','16761006-4','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(137,'COD-16380721','16761006-4','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(138,'COD-16140417','16761006-4','1/12/2021','Notas','9');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(139,'COD-16030626','16761006-4','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(140,'COD-16371227','16761006-4','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(141,'COD-16841115','16441015-4','1/12/2021','Notas','2');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(142,'COD-16310310','16441015-4','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(143,'COD-16830701','16441015-4','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(144,'COD-16940106','16441015-4','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(145,'COD-16890219','16441015-4','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(146,'COD-16100830','16441015-4','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(147,'COD-16640114','16441015-4','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(148,'COD-16010817','16441015-4','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(149,'COD-16020611','16441015-4','1/12/2021','Notas','10');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(150,'COD-16681025','16441015-4','1/12/2021','Notas','5');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(151,'COD-16770611','16701229-2','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(152,'COD-16300307','16701229-2','1/12/2021','Notas','1');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(153,'COD-16160307','16701229-2','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(154,'COD-16910202','16701229-2','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(155,'COD-16870415','16701229-2','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(156,'COD-16640530','16701229-2','1/12/2021','Notas','3');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(157,'COD-16660218','16701229-2','1/12/2021','Notas','4');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(158,'COD-16930211','16701229-2','1/12/2021','Notas','8');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(159,'COD-16810926','16701229-2','1/12/2021','Notas','7');
+INSERT INTO BitacoraXdocente (id,coorelativo,dui_docente,fecha_hora,tipo,comentario) VALUES(160,'COD-16590107','16701229-2','1/12/2021','Notas','7');
 
 
 
