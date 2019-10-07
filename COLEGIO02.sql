@@ -6,97 +6,115 @@ nie INT NOT NULL PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL,
 apellido VARCHAR(50) NOT NULL,
 edad INT);
+
 --2)
 CREATE TABLE Seccion(
 id INT NOT NULL PRIMARY KEY,
 grado VARCHAR(20) NOT NULL,
 letra CHAR(1));
+
 --3)
 CREATE TABLE Pago(
 id INT NOT NULL PRIMARY KEY,
 tipo VARCHAR(140),
 numero NUMERIC(5,2));
+
 --4)
 CREATE TABLE Responsable(
 dui VARCHAR(10) NOT NULL PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
 parentesco VARCHAR(50) NOT NULL);
+
 --5)
 CREATE TABLE Carrera(
 id INT NOT NULL PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL);
+
 --6)
 CREATE TABLE Docente(
 dui VARCHAR(10) NOT NULL PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL);
+
 --7)
-CREATE TABLE Anno(
-id INT NOT NULL PRIMARY KEY,
-anno INT NOT NULL);
---8)
 CREATE TABLE Subvencion(
 id int NOT NULL PRIMARY KEY,
 tipo VARCHAR(140),
 numero NUMERIC(5,2));
---9)
+
+--8)
 CREATE TABLE Edificio(
 id INT NOT NULL PRIMARY KEY,
 nombre VARCHAR(50));
 
---***********************************************************************************
---10)
+--***************************************************************
+
+--9)
 CREATE TABLE Bitacora(
 correlativo VARCHAR(50) NOT NULL PRIMARY KEY,
-tipo VARCHAR(150) NOT NULL,
-comentario VARCHAR(140),
-fecha_hora TIMESTAMP NOT NULL,
+nie_alumno INT NOT NULL,
 dui_responsable VARCHAR(10) NOT NULL,
-FOREIGN KEY (dui_responsable) REFERENCES Responsable (dui) ON DELETE CASCADE);
+FOREIGN KEY (dui_responsable) REFERENCES Responsable (dui),
+FOREIGN KEY (nie_alumno) REFERENCES Alumno (nie));
+
+--10)
+CREATE TABLE BitacoraXdocente(
+id INT NOT NULL PRIMARY KEY,
+coorelativo VARCHAR(10) NOT NULL,
+dui_docente VARCHAR(10) NOT NULL,
+fecha_hora DATE,
+tipo VARCHAR(10),
+comentario VARCHAR(150),
+FOREIGN KEY (coorelativo) REFERENCES Bitacora (correlativo),
+FOREIGN KEY (dui_docente) REFERENCES Docente (dui));
+
 --11)
 CREATE TABLE Empleado(
 id INT NOT NULL  PRIMARY KEY,
 area VARCHAR(50) NOT NULL DEFAULT 'UCA',
 dui_responsable VARCHAR(10) NOT NULL,
-FOREIGN KEY (dui_responsable) REFERENCES Responsable (dui) ON DELETE CASCADE);
+FOREIGN KEY (dui_responsable) REFERENCES Responsable (dui));
+
 --12)
 CREATE TABLE Estudiante(
 nie INT NOT NULL PRIMARY KEY,--( NO ES EL MISMO NIE DE LA TABLA ALUMNO, el estudiante de esta tabla es el que funge como docente o responsable, no el alumno)
-nombre VARCHAR(50) NOT NULL,
-dui_responsable VARCHAR(10) NOT NULL,
-dui_docente VARCHAR(10) NOT NULL,
-FOREIGN KEY (dui_responsable) REFERENCES Responsable (dui) ON DELETE CASCADE,
-FOREIGN KEY (dui_docente) REFERENCES Docente(dui) ON DELETE CASCADE);
+dui_responsable VARCHAR(10),
+dui_docente VARCHAR(10),
+FOREIGN KEY (dui_responsable) REFERENCES Responsable (dui),
+FOREIGN KEY (dui_docente) REFERENCES Docente(dui));
+
 --13)
 CREATE TABLE Profesor(
 id INT NOT NULL  PRIMARY KEY,
-nombre VARCHAR(50) NOT NULL,
 dui_docente VARCHAR(10) NOT NULL,
-FOREIGN KEY (dui_docente) REFERENCES Docente(dui) ON DELETE CASCADE);
+FOREIGN KEY (dui_docente) REFERENCES Docente(dui));
+
 --14)
 CREATE TABLE Relaciona(
 id INT NOT NULL  PRIMARY KEY,
 correlativo VARCHAR(50) NOT NULL,
 coorelativo_destino VARCHAR(50) NOT NULL,
-FOREIGN KEY (correlativo) REFERENCES Bitacora(correlativo) ON DELETE CASCADE,
-FOREIGN KEY (coorelativo_destino) REFERENCES Bitacora(correlativo) ON DELETE CASCADE);
+FOREIGN KEY (correlativo) REFERENCES Bitacora(correlativo),
+FOREIGN KEY (coorelativo_destino) REFERENCES Bitacora(correlativo));
+
 --15)
 CREATE TABLE Otorga(
 id INT NOT NULL  PRIMARY KEY,
 id_Subvencion INT NOT NULL,
 nie_alumno INT NOT NULL,
 anno DATE,
-FOREIGN KEY (nie_alumno) REFERENCES Alumno(nie) ON DELETE CASCADE,
-FOREIGN KEY (id_Subvencion) REFERENCES Subvencion(id) ON DELETE CASCADE); 
+FOREIGN KEY (nie_alumno) REFERENCES Alumno(nie),
+FOREIGN KEY (id_Subvencion) REFERENCES Subvencion(id)); 
+
 --16)
 CREATE TABLE Matricula(
 id SERIAL PRIMARY KEY,
 nie INT NOT NULL,
 id_seccion INT NOT NULL,
 anno INT NOT NULL,
-FOREIGN KEY (nie) REFERENCES Alumno(nie) ON DELETE CASCADE,
-FOREIGN KEY (id_seccion) REFERENCES Seccion(id) ON DELETE CASCADE);
+FOREIGN KEY (nie) REFERENCES Alumno(nie),
+FOREIGN KEY (id_seccion) REFERENCES Seccion(id));
 
 --17)
 CREATE TABLE Estudia(
@@ -104,8 +122,9 @@ id INT NOT NULL  PRIMARY KEY,
 nie INT NOT NULL,
 id_carrera INT NOT NULL,
 anno DATE NOT NULL,
-FOREIGN KEY (nie) REFERENCES Estudiante(nie) ON DELETE CASCADE,
-FOREIGN KEY (id_carrera) REFERENCES Carrera(id) ON DELETE CASCADE);
+FOREIGN KEY (nie) REFERENCES Estudiante(nie),
+FOREIGN KEY (id_carrera) REFERENCES Carrera(id));
+
 --18)
 CREATE TABLE Talonario(
 nie_alumno INT NOT NULL,
@@ -117,6 +136,7 @@ fecha_admision DATE NOT NULL,
 fecha_vencimiento DATE NOT NULL,
 FOREIGN KEY (nie_alumno) REFERENCES Alumno(nie) ON DELETE CASCADE,
 FOREIGN KEY (id_pago) REFERENCES Pago(id) ON DELETE CASCADE);
+
 --19)
 CREATE TABLE Accede(
 nie_alumno INT NOT NULL,
@@ -126,26 +146,11 @@ hora_entrada TIME NOT NULL,
 hora_salida TIME NOT NULL,
 FOREIGN KEY (nie_alumno) REFERENCES Alumno(nie) ON DELETE CASCADE,
 FOREIGN KEY (id_edificio) REFERENCES Edificio(id) ON DELETE CASCADE);
---20)
-CREATE TABLE Anota(
-id INT NOT NULL PRIMARY KEY,
-correlativo_bitacora VARCHAR(50) NOT NULL,
-dui_docente VARCHAR(10) NOT NULL,
-FOREIGN KEY (dui_docente) REFERENCES Docente(dui) ON DELETE CASCADE,
-FOREIGN KEY (correlativo_bitacora) REFERENCES Bitacora(correlativo) ON DELETE CASCADE);
-
---21)
-CREATE TABLE AlumnoXResponsable(
-id SERIAL PRIMARY KEY,
-nie_alumno INT NOT NULL,
-dui_responsable VARCHAR(10) NOT NULL,
-FOREIGN KEY (nie_alumno) REFERENCES Alumno(nie) ON DELETE CASCADE,
-FOREIGN KEY (dui_responsable) REFERENCES Responsable (dui) ON DELETE CASCADE);
 
 
---deben salir 20 tablas en total
+--deben salir 19 tablas en total
 
---***********************************************************************************************************--
+--***************************************************************
 --Tabla: Alumno--
 --Kinder 4--
 INSERT INTO Alumno (nie,nombre,apellido,edad) VALUES (16981120,'Chancellor','Mendez',4);
