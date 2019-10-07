@@ -127,11 +127,12 @@ FOREIGN KEY (id_carrera) REFERENCES Carrera(id));
 
 --18)
 CREATE TABLE Talonario(
+id INT NOT NULL PRIMARY KEY,
 nie_alumno INT NOT NULL,
 id_pago INT NOT NULL,--FK
 monto NUMERIC(5,2) NOT NULL,
 estado VARCHAR(150) NOT NULL,
-fecha_pago DATE NOT NULL PRIMARY KEY,
+fecha_pago DATE NOT NULL,
 fecha_admision DATE NOT NULL,
 fecha_vencimiento DATE NOT NULL,
 FOREIGN KEY (nie_alumno) REFERENCES Alumno(nie) ON DELETE CASCADE,
