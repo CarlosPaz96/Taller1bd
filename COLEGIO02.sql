@@ -609,107 +609,32 @@ INSERT INTO Edificio (id,nombre) VALUES (2,'Basica');
 INSERT INTO Edificio (id,nombre) VALUES (3,'Media');
 
 --***********************************************************************************************************--
---Tabla: Anno--
-INSERT INTO Anno (id,Anno) VALUES (1,'2020');
-INSERT INTO Anno (id,Anno) VALUES (2,'2021');
-
-
---***********************************************************************************************************--
---Tabla: EMPLEADO--
---Kinder 4--
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (1,'16981129-3','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (2,'16350423-4','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (3,'16901008-5','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (4,'16161125-3','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (5,'16881126-8','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (6,'16540808-6','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (7,'16880618-3','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (8,'16600710-7','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (9,'16021027-6','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (10,'16900809-8','UCA');
-
---Kinder 5--
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (11,'16490112-9','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (12,'16431020-2','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (13,'16990614-9','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (14,'16470226-9','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (15,'16130911-2','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (16,'16040118-1','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (17,'16080725-6','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (18,'16060126-0','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (19,'16361224-2','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (20,'16590609-0','UCA');
-
---Prepa--
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (21,'16200504-6','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (22,'16240112-9','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (23,'16650713-4','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (24,'16270208-7','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (25,'16970520-3','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (26,'16441204-5','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (27,'16850627-6','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (28,'16800813-1','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (29,'16500504-3','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (30,'16400724-7','UCA');
-
---Primero--
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (31,'16080927-4','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (32,'16130114-0','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (33,'16770901-5','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (34,'16460827-2','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (35,'16610405-4','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (36,'16631211-0','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (37,'16500905-4','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (38,'16841125-8','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (39,'16891105-9','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES  (40,'16681215-0','UCA');
-
---Segundo--
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (41,'16160210-8','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (42,'16140524-5','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (43,'16191107-6','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (44,'16810916-8','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (45,'16640525-4','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (46,'16960806-1','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (47,'16241020-8','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (48,'16340803-6','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (49,'16351127-0','UCA');
-INSERT INTO Empleado (id,dui_responsable,area) VALUES (50,'16680419-1','UCA');
-
-
-
---***********************************************************************************************************--
 --Tabla: Estudiante--
 
-INSERT INTO Estudiante (nie,dui_docente,nombre, dui_responsable) VALUES (16410921,'16970415-5','Kyla Wallace','16870724-7');
-INSERT INTO Estudiante (nie,dui_docente,nombre, dui_responsable) VALUES (16300730,'16351211-8','Wynne Knight','16110703-4');
-INSERT INTO Estudiante (nie,dui_docente,nombre, dui_responsable) VALUES (16301204,'16851203-6','Xandra Hudson','16850501-3');
+INSERT INTO Estudiante (nie,dui_docente,dui_responsable) VALUES (16410921,'16761006-4',null);
+INSERT INTO Estudiante (nie,dui_docente,dui_responsable) VALUES (16300730,null,'16180504-3');
+INSERT INTO Estudiante (nie,dui_docente,dui_responsable) VALUES (16301204,'16701229-2',null);
 
 
 --***********************************************************************************************************--
 --Tabla: Profesor--
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (1,'16970415-5','Kyla Wallace');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (2,'16351211-8','Wynne Knight');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (3,'16851203-6','Xandra Hudson');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (4,'16380520-5','Patricia Greer');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (5,'16770629-9','Indira Whitney');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (6,'16830727-5','Signe Holder');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (7,'16991127-9','Laura Craft');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (8,'16990125-2','Stella Mcintyre');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (9,'16480905-3','Driscoll Wheeler');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (10,'16461023-8','Reuben Parrish');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (11,'16990410-4','Ryan Mcleod');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (12,'16280226-9','Jade Miller');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (13,'16291004-4','Armando Day');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (14,'16761006-4','Callum Kirk');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (15,'16441015-4','Leslie Kelley');
-INSERT INTO Profesor (id,dui_docente,nombre) VALUES (16,'16701229-2','Cullen Everett');
-
+INSERT INTO Profesor (id,dui_docente) VALUES (1,'16970415-5');
+INSERT INTO Profesor (id,dui_docente) VALUES (2,'16351211-8');
+INSERT INTO Profesor (id,dui_docente) VALUES (3,'16851203-6');
+INSERT INTO Profesor (id,dui_docente) VALUES (4,'16380520-5');
+INSERT INTO Profesor (id,dui_docente) VALUES (5,'16770629-9');
+INSERT INTO Profesor (id,dui_docente) VALUES (6,'16830727-5');
+INSERT INTO Profesor (id,dui_docente) VALUES (7,'16991127-9');
+INSERT INTO Profesor (id,dui_docente) VALUES (8,'16990125-2');
+INSERT INTO Profesor (id,dui_docente) VALUES (9,'16480905-3');
+INSERT INTO Profesor (id,dui_docente) VALUES (10,'16461023-8');
+INSERT INTO Profesor (id,dui_docente) VALUES (11,'16990410-4');
+INSERT INTO Profesor (id,dui_docente) VALUES (12,'16280226-9');
+INSERT INTO Profesor (id,dui_docente) VALUES (13,'16291004-4');
+INSERT INTO Profesor (id,dui_docente) VALUES (15,'16441015-4');
 
 --***********************************************************************************************************--
 --Tabla: Matricula--
-
-
 --Kinder 4--
 INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16981120,1,1);
 INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16420327,1,1);
@@ -902,169 +827,7 @@ INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16930211,16,1);
 INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16810926,16,1);
 INSERT INTO Matricula (nie,id_seccion,anno) VALUES (16590107,16,1);
 
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16981120,'16981129-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16420327,'16350423-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16500116,'16901008-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16801118,'16161125-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16490216,'16881126-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16360718,'16540808-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16130113,'16880618-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16340112,'16600710-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16971101,'16021027-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16360622,'16900809-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16010603,'16490112-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16840725,'16431020-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16340111,'16990614-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16250714,'16470226-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16990801,'16130911-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16820907,'16040118-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16650523,'16080725-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16420515,'16060126-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16440801,'16361224-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16081015,'16590609-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16381121,'16200504-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16220615,'16240112-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16570110,'16650713-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16980202,'16270208-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16800622,'16970520-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16620716,'16441204-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16920319,'16850627-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16260113,'16800813-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16371118,'16500504-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16311217,'16400724-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16540104,'16080927-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16560817,'16130114-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16611027,'16770901-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16820129,'16460827-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16380305,'16610405-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16171119,'16631211-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16340712,'16500905-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16310212,'16841125-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16471222,'16891105-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16421010,'16681215-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16351029,'16160210-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16891001,'16140524-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16150610,'16191107-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16840721,'16810916-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16151119,'16640525-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16680622,'16960806-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16120615,'16241020-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16020927,'16340803-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16030517,'16351127-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16380503,'16680419-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16450211,'16721019-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16010208,'16661008-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16041204,'16740506-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16131006,'16090418-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16870129,'16600723-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16640229,'16470414-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16040602,'16840218-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16230704,'16291129-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16090806,'16400615-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16031107,'16960809-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16550810,'16271217-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16800803,'16390408-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16310916,'16141016-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16630515,'16491120-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16160914,'16930229-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16030417,'16590213-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16011015,'16130501-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16240409,'16320929-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16260624,'16950214-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16100321,'16210124-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16300802,'16511203-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16300908,'16961002-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16361119,'16800205-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16290830,'16200324-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16071014,'16100104-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16120427,'16031114-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16500907,'16131210-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16361222,'16320903-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16650611,'16840630-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16730811,'16080114-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16540414,'16931010-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16590710,'16610725-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16900722,'16521013-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16470823,'16541203-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16810625,'16011212-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16770610,'16900607-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16470526,'16540909-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16270802,'16881009-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16910213,'16510426-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16110623,'16800817-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16541019,'16971123-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16741101,'16630529-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16161113,'16220723-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16560207,'16140601-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16030220,'16681016-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16871210,'16060526-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16810924,'16150107-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16591210,'16191123-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16001227,'16970821-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16981228,'16860806-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16680827,'16550215-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16311214,'16310806-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16540110,'16440207-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16080302,'16400414-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16520721,'16561113-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16611004,'16760727-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16261115,'16240814-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16210212,'16930122-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16761220,'16950702-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16640220,'16650613-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16460429,'16401002-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16700329,'16541104-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16850209,'16091224-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16790803,'16610406-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16090824,'16450528-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16141023,'16310612-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16741116,'16960704-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16260407,'16880111-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16031017,'16320719-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16981219,'16630604-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16280918,'16260401-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16080918,'16590109-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16410313,'16791021-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16101226,'16050714-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16320317,'16430917-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16821009,'16740216-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16171205,'16280915-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16120611,'16110217-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16180509,'16070620-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16810826,'16541109-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16070827,'16841009-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16310709,'16850501-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16680812,'16211105-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16680122,'16120703-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16270812,'16790114-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16100713,'16780313-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16380721,'16040422-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16140417,'16860806-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16030626,'16670914-6');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16371227,'16910711-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16841115,'16940314-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16310310,'16390511-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16830701,'16411113-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16940106,'16750519-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16890219,'16820427-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16100830,'16841125-3');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16640114,'16610408-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16010817,'16870724-7');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16020611,'16280719-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16681025,'16350504-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16770611,'16490912-5');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16300307,'16770807-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16160307,'16530524-1');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16910202,'16161122-0');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16870415,'16110703-4');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16640530,'16810809-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16660218,'16320124-9');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16930211,'16760603-2');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16810926,'16110604-8');
-INSERT INTO AlumnoXResponsable (nie_alumno,dui_responsable) VALUES(16590107,'16180504-3');
 
-
-SELECT * FROM AlumnoXResponsable
 
 --dui responsable
 "16981129-3","16350423-4","16901008-5","16161125-3","16881126-8","16540808-6","16880618-3","16600710-7","16021027-6","16900809-8","16490112-9","16431020-2","16990614-9","16470226-9","16130911-2","16040118-1","16080725-6","16060126-0","16361224-2","16590609-0","16200504-6","16240112-9","16650713-4","16270208-7","16970520-3","16441204-5","16850627-6","16800813-1","16500504-3","16400724-7","16080927-4","16130114-0","16770901-5","16460827-2","16610405-4","16631211-0","16500905-4","16841125-8","16891105-9","16681215-0","16160210-8","16140524-5","16191107-6","16810916-8","16640525-4","16960806-1","16241020-8","16340803-6","16351127-0","16680419-1","16721019-6","16661008-8","16740506-9","16090418-7","16600723-3","16470414-2","16840218-3","16291129-5","16400615-7","16960809-9","16271217-4"."16390408-5"."16141016-2"."16491120-3"."16930229-4"."16590213-9"."16130501-1"."16320929-9"."16950214-9"."16210124-5"."16511203-9"."16961002-3"."16800205-7"."16200324-3"."16100104-6"."16031114-9"."16131210-1"."16320903-7"."16840630-4"."16080114-7"."16931010-5"."16610725-1"."16521013-0"."16541203-8"."16011212-9"."16900607-4"."16540909-7"."16881009-2"."16510426-6"."16800817-0"."16971123-0"."16630529-3"."16220723-4"."16140601-2"."16681016-2"."16060526-2"."16150107-6"."16191123-7"."16970821-0"."16860806-0"."16550215-9"."16310806-0"."16440207-0"."16400414-4"."16561113-3"."16760727-2"."16240814-6"."16930122-7","16950702-9","16650613-7","16401002-0","16541104-9","16091224-5","16610406-2","16450528-5","16310612-0","16960704-8","16880111-3","16320719-7","16630604-3","16260401-1","16590109-3","16791021-5","16050714-2","16430917-3","16740216-2","16280915-4","16110217-8","16070620-1","16541109-4","16841009-9","16850501-3","16211105-7","16120703-8","16790114-5","16780313-7","16040422-5","16860806-1","16670914-6","16910711-3","16940314-3","16390511-9","16411113-1","16750519-2","16820427-2","16841125-3","16610408-0","16870724-7","16280719-1","16350504-0","16490912-5","16770807-1","16530524-1","16161122-0","16110703-4","16810809-9","16320124-9","16760603-2","16110604-8","16180504-3"
